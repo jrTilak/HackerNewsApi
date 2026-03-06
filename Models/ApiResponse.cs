@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 namespace HackerNewsApi.Models;
 
 /// <summary>
-/// Structured JSON response: error message compulsory for errors; for success message is "normal" and optional generic data.
+/// Structured JSON response: error message compulsory for errors; for success message is the default status text (e.g. "OK" for 200) and optional generic data.
 /// Content-Type is always application/json.
 /// </summary>
 public record ApiResponse<T>
@@ -17,10 +17,10 @@ public record ApiResponse<T>
   [JsonPropertyName("data")]
   public T? Data { get; init; }
 
-  public static ApiResponse<T> Success(T? data = default) => new()
+  public static ApiResponse<T> Success(T? data = default, string message = "OK") => new()
   {
     Error = false,
-    Message = "normal",
+    Message = message,
     Data = data
   };
 

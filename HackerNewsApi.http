@@ -1,1 +1,4 @@
 @HackerNewsApi_HostAddress = http://localhost:5077
+
+### Best stories (top n by score)
+GET {{HackerNewsApi_HostAddress}}/api/beststories?n=5
