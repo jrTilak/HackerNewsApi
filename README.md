@@ -7,7 +7,7 @@ REST API that returns the best _n_ stories from the [Hacker News API](https://gi
 ## How to run
 
 - **Prerequisites:** [.NET 10 SDK](https://dotnet.microsoft.com/download).
-- **Run:** `dotnet run` — API is at http://localhost:5077 (or https://localhost:7273).
+- **Run:** `dotnet run` — API is at http://localhost:5077.
 - **Endpoint:** `GET /api/beststories?n=5` (replace 5 with desired count).
 - **Swagger (Development):** http://localhost:5077/swagger
 
